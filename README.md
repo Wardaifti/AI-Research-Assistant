@@ -36,7 +36,7 @@ pip install -r requirements.txt
 CORE_API_KEY=your_core_api_key
 
 
-## 📦 Dependencies
+ ## 📦 Dependencies
 Flask
 python-docx
 pytesseract
@@ -46,10 +46,10 @@ requests
 python-dotenv
 
 
-## 🙌 Contribution
+ ## 🙌 Contribution
 Pull requests and feedback are welcome!
 
-## 📄 License
+ ## 📄 License
 MIT License © 2025 [Warda]
 
 
