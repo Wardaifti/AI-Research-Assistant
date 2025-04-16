@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Research Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to AI Research Assistant</h1>
+        <p>Select an option below:</p>
+
+        <ul class="options-list">
+            <li>
+                <a class="btn" href="/search">🔍 Search for Research Papers </a>
+            </li>
+            <li>
+                <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                    <label for="file">📄 Upload a file for summarization:</label><br>
+                    <input type="file" name="file" id="file" required>
+                    <button type="submit">Upload & Summarize</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

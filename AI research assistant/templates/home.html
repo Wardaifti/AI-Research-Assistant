@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research Paper Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Research Paper Finder</h1>
+        <p>Start by searching for a topic below.</p>
+
+        <form action="/search" method="post" class="search-bar">
+            <input type="text" name="query" placeholder="e.g., machine learning, NLP, computer vision" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

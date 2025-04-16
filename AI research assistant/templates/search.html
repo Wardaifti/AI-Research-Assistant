@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results - AI Research Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Research Papers</h1>
+
+        <!-- Search Bar -->
+        <form action="/search" method="post" class="search-bar">
+            <input type="text" name="query" placeholder="Search for papers..." value="{{ query }}" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Search Results -->
+        {% if results %}
+            <p class="result-count">{{ results | length }} results found</p>
+            <div class="results">
+                {% for result in results %}
+                    <div class="paper-card">
+                        <h2><a href="{{ result.link }}" target="_blank">{{ result.title | default("Untitled") }}</a></h2>
+                        <p><strong>Authors:</strong> {{ result.authors | default("Unknown") }}</p>
+                        <p><strong>Published In:</strong> {{ result.publication | default("Unknown") }}</p>
+                        <p>{{ result.summary | default("No summary available") | truncate(300) }}</p>
+                        <a class="read-more" href="{{ result.link }}" target="_blank">Read More →</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
