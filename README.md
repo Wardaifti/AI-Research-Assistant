@@ -24,7 +24,7 @@ ai-research-assistant/ │ ├── app.py # Main Flask app ├── requireme
 
 ### 1. Clone the repository
 
-```bash
+bash
 git clone https://github.com/yourusername/ai-research-assistant.git
 cd ai-research-assistant
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 CORE_API_KEY=your_core_api_key
 
 
- ## 📦 Dependencies
+ ### 📦 Dependencies
 Flask
 python-docx
 pytesseract
